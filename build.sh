@@ -1,1 +1,1 @@
-python3 src/main.py "/static_page/"
+python3 src/main.py "https://lyebon.github.io/static_page/"
