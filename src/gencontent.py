@@ -32,7 +32,7 @@ def generate_page(content_path: pathlib.Path, template_path: pathlib.Path, publi
     content = html_nodes.to_html()
     full_template = title_template.replace("{{ Content }}",content)
     image_template = full_template.replace('scr="/', 'src="{basepath}')
-    final_template = image_template.replace('href="/', 'href="{content_path}')
+    final_template = image_template.replace('href="/', 'href="{basepath}')
     directory = os.path.dirname(public_path)
     os.makedirs(directory, exist_ok=True)
     write_file(public_path, final_template)
